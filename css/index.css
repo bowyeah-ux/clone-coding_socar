@@ -1,0 +1,505 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.hinner {
+    width: 100%;
+}
+.fixed {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 9;
+    position: fixed;
+    height: 72px;
+}
+.fixed.on {
+    background-color: #141a24;
+    transition: all 0.2s;
+}
+
+.headerwrap {
+    width: 1536px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.burger {
+    cursor: pointer;
+}
+
+.headerwrap img:nth-child(1) {
+    width: 128px;
+}
+
+
+
+
+
+
+
+
+.minner {
+    width: 100%;
+    background-color: #141a24;
+
+}
+.minner .hero {
+    width: 100%;
+}
+.minner .hero video {
+    width: 100%;
+    height: 919px;
+    object-fit: cover;
+}
+.htitle {
+    text-align: center;
+    gap: 2px;
+    /* position: absolute;
+    left: 50%; top: 55%;
+    transform: translate(-50%, -50%); */
+    color: #fff;
+    animation: text 1s;
+    
+}
+
+.htitle h1 {
+    font-size: 95px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%; top: 470px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+    animation: text 0.8s forwards;
+}
+
+@keyframes text {
+    0% {
+        top: 470px;
+        opacity: 0.6;
+        
+    }
+    100% {
+        top: 430px;
+        opacity: 1;
+    }
+}
+
+
+.htitle p {
+    font-size: 40px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%; top: 540px;
+    transform: translateX(-50%);
+    animation: textp 0.8s linear 0.3s forwards;
+    opacity: 0;
+}
+@keyframes textp {
+    0% {
+        top: 540px;
+        opacity: 0;
+    }
+    100% {
+        top: 500px;
+        opacity: 1;
+    }
+}
+body.fix {
+    overflow: hidden;
+}
+.navbox {
+    display: none;
+
+}
+.navbox.hm {
+    display: block;
+   
+}
+.navbg {
+    background-color: #121212d9;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+  
+}
+.menu {
+    background-color: #262f3c;
+    color: #99a1b1;
+    position: absolute;
+    right: 0; top: 0;
+    height: 100%;
+    width: 556px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+    
+}
+.menu ul li {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.firstmenu li:last-child::after {
+
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #99a1b1;
+    display: block;
+    margin-top: 25px;
+
+}
+
+
+
+.close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+.close img {
+    width: 26px;
+    cursor: pointer;
+    
+}
+
+
+
+.hero button {
+    cursor: pointer;
+    background-color: #0078ff;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 228px;
+    height: 72px;
+    font-weight: normal;
+    border: none;
+    position: absolute;
+    z-index: inherit;
+    bottom: 60px; right: 315px;
+    opacity: 0;
+    animation: btn 1s 1.5s forwards;
+   
+}
+
+@keyframes btn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+.hero button img {
+    width: 16px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+.carsharing {
+    width: 100%;
+}
+
+.carinner {
+    width: 100%;
+    padding: 160px 48px 96px;
+}
+.cartitle {
+    width: 872px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.cartitle h2 {
+    font-weight: 400;
+    font-size: 37px;
+    margin-bottom: 96px;
+}
+
+.carslide {
+    width: 872px;
+    height: 484px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.swiper-slide {
+    padding: 48px;
+}
+
+.one {
+    background: url('../image/slide_normal_01.jpg') no-repeat center/cover;
+}
+.two {
+    background: url('../image/slide_normal_04.jpg') no-repeat center/cover;
+}
+.three {
+    background: url('../image/slide_normal_03.jpg') no-repeat center/cover;
+}
+.four {
+    background: url('../image/slide_normal_02.jpg') no-repeat center/cover;
+}
+
+.dim {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #121212e6, #12121200);
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -2;
+}
+
+.slidetext {
+    color: #fff;
+}
+.slidetext h3 {
+    font-size: 33px;
+    margin-bottom: 7px;
+    line-height: 150%;
+    font-weight: 600;
+}
+.slidetext p {
+    font-size: 18px;
+    line-height: 170%;
+    font-weight: 500;
+}
+
+.swiper-button-prev {
+    width: 49px;
+    height: 48px;
+    padding-left: 20px;
+
+}
+.swiper-button-prev:after {
+    font-size: 35px;
+    font-weight: normal;
+    color: #e5e7eb;
+}
+.swiper-button-next {
+    width: 49px;
+    height: 48px;
+    padding-right: 20px;
+
+}
+.swiper-button-next:after {
+    font-size: 35px;
+    font-weight: normal;
+    color: #e5e7eb;
+}
+
+.grid {
+    width: 100%;
+}
+.gridinner {
+    padding: 160px 48px;
+}
+.gridtitle {
+    color: #fff;
+    width: 872px;
+    margin: 0 auto;
+    padding-bottom: 96px;
+    font-size: 24.6px;
+}
+.gridcardwrap {
+    display: grid;
+    width: 872px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.gridcardwrap .griditem img {
+    width: 420px;
+    height: 596px;
+    border-radius: 1rem;
+}
+.gridcardwrap .griditem {
+    position: relative;
+    cursor: pointer;
+}
+.gridcardwrap .griditem svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.filter {
+    background-color: #121212;
+    z-index: 88;
+    width: 420px;
+    height: 596px;
+    border-radius: 1rem;
+    position: absolute;
+    opacity: 0;
+    transition: all .4s;
+}
+.gridcardwrap .griditem:hover .filter {
+    opacity: 0.6;
+}
+.gridcardwrap .griditem:hover circle {
+    fill: #fff;
+}
+.gridcardwrap .griditem:hover path {
+   fill: rgba(20, 26, 36, 1);
+}
+
+.gridtext {
+    position: absolute;
+    top: 32px; left: 32px;
+    color: #fff;
+}
+.gridtext h3 {
+    font-size: 33px;
+    line-height: 150%;
+    font-weight: 600;
+    transform: translateY();
+}
+.gridtext p {
+    font-size: 18px;
+    line-height: 170%;
+    font-weight: 500;
+}
+
+/* -- footer 상단 바로가기 부분 */
+.banner {
+    width: 100%;
+    height: 250px;
+    background: url('../image/footer_image.jpg') no-repeat center/cover;
+    background-position-y: -570px;
+    position: relative;
+    cursor: pointer;
+}
+.imgbg {
+    background-color: #121212;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+
+button {
+    border: 1px solid #fff;
+    padding: 0 31px;
+    text-align: center;
+    border-radius: 10px;
+    height: 75px;
+    background-color: initial;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 75px;
+    margin-top: 20px;
+    transform: translateX(135px);
+    cursor: pointer;
+  
+}
+
+
+.fa-arrow-right {
+    font-size: 20px;
+}
+.banner p {
+    color: #fff;
+    font-size: 33px;
+    line-height: 150%;
+    font-weight: 600;
+    text-align: center;
+}
+.bannerinner {
+    
+    z-index: 33;
+    width: 540px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+ 
+}
+
+
+/* ----- footer 부분 ------ */
+footer {
+    width: 100%;
+    background-color: #262F3C;
+    color: #fff;
+}
+.finner {
+    width: 1905px;
+    margin: 0 auto;
+    padding: 64px 48px 96px;
+}
+.finfo-wrap {
+    width: 1536px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.ftitle {
+    margin-bottom: 10px;
+}
+.ftitle h3 {
+    font-size: 20px;
+}
+.finfo span:nth-child(3) {
+    text-decoration: underline;
+}
+.finfo, .fsitemap {
+    font-size: 15px;
+}
+.finfo {
+    margin-bottom: 56px;
+    line-height: 26px;
+    font-weight: 500;
+}
+.fsitemap span {
+    font-weight: bold;
+    padding-right: 38px;
+
+}
+.fmenu {
+    display: flex;
+   gap: 112px;
+}
+
+.fmenu a {
+    display: inline-block;
+    padding-top: 8px;
+}
+.fmenu ul > li:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.icon {
+    margin-top: 56px;
+}  
+.icon img {
+    padding-right: 8px;
+
+}
